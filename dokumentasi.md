@@ -175,6 +175,15 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Refinement UI/UX Menyeluruh Berdasarkan Riset Pengguna & Tim RnD**:
+  * **3 Kartu Visi Utama CnC (Standar HIMFO)**: Menggantikan blok teks definisi statis yang padat dengan 3 kartu modular berlatar foto riil mahasiswa (Inkubasi Riil, Mentor Ahli, Prestasi Lomba). Di mobile, kartu dapat digeser secara horizontal (*horizontal swipe carousel*) dengan indikator `Geser kartu ⇄`.
+  * **Tata Letak 2x2 Grid untuk Keuntungan (Benefits)**: Menata 4 pilar keuntungan ke dalam format grid 2x2 di layar smartphone (dan 4 kolom di desktop) untuk menghilangkan kelelahan gulir vertikal (*scroll fatigue*).
+  * **Galeri Dokumentasi Foto Horizontal**: Mengubah galeri 5 foto projek menjadi slider horizontal yang ringkas di mobile, memangkas badge menjadi `DOKUMENTASI · 5 FOTO` (bebas patah baris), dan memastikan nama serta deskripsi teknis projek langsung terlihat (*above the fold*).
+  * **Optimalisasi Kontrol Katalog Lomba**: Menghapus tombol geser atas ganda yang membingungkan, menyelaraskan tab kategori ke dalam satu baris geser horizontal, menyorot pegangan Instagram `@cnc_himtika ↗` dengan lencana interaktif, serta mengganti tombol "Deck" yang tebal dengan navigasi angka minimalis `1` s.d. `8` berapit panah `<` dan `>`.
+  * **6 Pilar Divisi Peminatan Visual**: Menata 6 pilar divisi ke dalam grid 2-kolom responsif dengan ikon vektor Iconify (Software Eng, UI/UX, Data Science & AI, Competitive Programming, Cybersecurity, IoT & Hardware).
+
+---
+
 ### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
 * **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
   * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).

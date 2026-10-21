@@ -1550,27 +1550,46 @@ tailwind.config = {
       if (!container) return;
 
       container.innerHTML = '';
+      const isFirst = currentCompSlide === 0;
+      const isLast = currentCompSlide >= currentSlideCount - 1;
+
+      const prevBtn = document.createElement('button');
+      prevBtn.type = 'button';
+      prevBtn.setAttribute('aria-label', 'Halaman Sebelumnya');
+      prevBtn.disabled = isFirst;
+      prevBtn.onclick = () => slideCompetitions(-1);
+      prevBtn.className = 'w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-[#636B2F]/40 bg-[#071A11] text-slate-300 hover:text-white hover:border-[#2CFF05]/50 flex items-center justify-center transition-all disabled:opacity-30 disabled:pointer-events-none active:scale-95 shrink-0';
+      prevBtn.innerHTML = '<svg class="w-3.5 h-3.5 text-[#2CFF05]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>';
+      container.appendChild(prevBtn);
+
       for (let s = 0; s < currentSlideCount; s++) {
         const sNum = s + 1;
-        const startCard = s * 5 + 1;
-        const endCard = Math.min((s + 1) * 5, totalFilteredCards);
         const isActive = s === currentCompSlide;
 
         const btn = document.createElement('button');
         btn.type = 'button';
-        btn.setAttribute('aria-label', `Pindah ke Deck ${sNum}`);
+        btn.setAttribute('aria-label', `Pindah ke Halaman ${sNum}`);
         btn.onclick = () => goToCompSlide(s);
 
         if (isActive) {
-          btn.className = 'h-10 px-3.5 rounded-xl border border-[#2CFF05] bg-[#2CFF05]/15 text-[#2CFF05] font-mono text-xs font-bold transition-all shadow-sm flex items-center justify-center';
-          btn.innerHTML = `<span>Deck ${String(sNum).padStart(2, '0')} (${startCard}-${endCard})</span>`;
+          btn.className = 'w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#2CFF05] text-[#03110A] font-mono text-xs sm:text-sm font-bold transition-all shadow-neon-glow flex items-center justify-center scale-105 shrink-0';
+          btn.innerHTML = `<span>${sNum}</span>`;
         } else {
-          btn.className = 'h-10 px-3.5 rounded-xl border border-[#636B2F]/30 bg-[#071A11] text-slate-400 hover:text-white hover:border-[#2CFF05]/40 font-mono text-xs font-semibold transition-all flex items-center justify-center';
-          btn.innerHTML = `<span>Deck ${String(sNum).padStart(2, '0')}</span>`;
+          btn.className = 'w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-[#636B2F]/30 bg-[#071A11] text-slate-300 hover:text-white hover:border-[#2CFF05]/40 font-mono text-xs sm:text-sm font-semibold transition-all flex items-center justify-center active:scale-95 shrink-0';
+          btn.innerHTML = `<span>${sNum}</span>`;
         }
 
         container.appendChild(btn);
       }
+
+      const nextBtn = document.createElement('button');
+      nextBtn.type = 'button';
+      nextBtn.setAttribute('aria-label', 'Halaman Selanjutnya');
+      nextBtn.disabled = isLast;
+      nextBtn.onclick = () => slideCompetitions(1);
+      nextBtn.className = 'w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-[#636B2F]/40 bg-[#071A11] text-slate-300 hover:text-white hover:border-[#2CFF05]/50 flex items-center justify-center transition-all disabled:opacity-30 disabled:pointer-events-none active:scale-95 shrink-0';
+      nextBtn.innerHTML = '<svg class="w-3.5 h-3.5 text-[#2CFF05]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>';
+      container.appendChild(nextBtn);
     }
 
     function dealCardsInActiveSlide() {
