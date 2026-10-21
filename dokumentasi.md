@@ -169,6 +169,12 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Sistem Ikon Profesional Standar Iconify (Anti-AI Slop)**:
+  * Mengeliminasi 100% penggunaan emoji unicode yang sering diasosiasikan dengan template AI (*AI slop*).
+  * Seluruh ikon tombol, tag fitur, domain teknologi, kartu keuntungan (*Benefits*), dan kanal media sosial mengadopsi SVG murni berbasis pustaka resmi **Iconify (Lucide Icons & Simple Icons)** untuk ketajaman visual, skalabilitas responsif, dan konsistensi stroke `2px`.
+
+---
+
 ### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
 * **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
   * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).
