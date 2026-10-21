@@ -61,8 +61,12 @@ Halaman web terbagi atas 5 section utama berurutan yang dapat diakses langsung m
 * **Kluster Tombol Aksi Hero**: Tombol langsung menuju katalog lomba, formulir minat bakat, dan informasi program.
 
 ### B. `#tentang-cnc` (Mengenal Program CnC)
-* Memaparkan 5 pilar kurikulum pembinaan teknologi (Software Engineering, UI/UX Design, AI & Data Science, Cyber Security, dan Internet of Things).
-* Kartu langkah alur seleksi dan inkubasi tim kompetisi (Grid adaptif: 3 kolom di laptop kecil, 5 kolom di desktop).
+* **Arsitektur Editorial Terbuka (Anti Card Fatigue)**: Menghilangkan kejenuhan komponen kartu berulang (*card overload*) dengan menerapkan variasi tata letak editorial:
+  * *Definisi Program*: Format editorial 2-kolom dengan garis aksen hijau neon (`border-l-2`) dan statistik terbuka.
+  * *2 Jalur Utama*: Showcase karya fisik dan pembinaan kompetisi IT terintegrasi visual foto mesin asli.
+  * *Tema Resmi 2026*: Pernyataan tematik terbuka berbingkai hairline horizontal dengan tag domain teknologi.
+  * *Alur Tahapan Seleksi*: Garis waktu proses terhubung (*connected process timeline*) 5 langkah terurut tanpa kotak kaku.
+  * *Keuntungan Program*: Grid 4 kolom terbuka minimalis tanpa pembatas kartu.
 
 ### C. `#dokumen` (Dokumentasi Projek Nyata FASILKOM)
 * Mengadopsi arsitektur **Bento 2-Kolom Carousel Slider**:
@@ -78,7 +82,7 @@ Halaman web terbagi atas 5 section utama berurutan yang dapat diakses langsung m
 
 ### E. `#minat-bakat` (Portal Pendataan Delegasi)
 * Wadah kartu QR Code statis beresolusi tinggi dengan tautan langsung `https://bit.ly/MinatBakatCnC`.
-* Kartu kontak narahubung resmi koordinator pembinaan FASILKOM.
+* Panduan terpadu terintegrasi (6 Pilar Divisi dalam bentuk pill badges fleksibel, 3 Tahapan Delegasi dalam bentuk vertical timeline terhubung, dan baris narahubung resmi terpusat tanpa penumpukan kartu ganda).
 
 ### F. `footer` (Identitas & Ekosistem Kampus)
 * **Emblem CnC Terpusat**: Logo vektor hijau bercahaya berukuran proporsional yang tegak lurus sejajar secara vertikal tepat di atas logo TikTok (ikon ke-3 di tengah).
