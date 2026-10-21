@@ -198,6 +198,18 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Aset Visual Dekoratif & Animasi Atmosferik Menyeluruh (Anti-Flat Polish)**:
+  * **Sistem Partikel Kuantum 3D WebGL (*Cyber Dust Particles*)**: Menambahkan 120 partikel debu kuantum bercahaya (neon green `#2CFF05`, gold `#EFBF04`, dan emerald `#00674F`) di dalam scene Three.js Hero. Partikel melayang mengorbit secara volumetrik di sekitar Mahkota Cyber 3D dan tangan Adam/God dengan *additive blending* ringan tanpa membebani GPU.
+  * **Aset Vektor Watermark Cyberpunk Tematik (SVG Murni)**:
+    * *Chapter 01 (Tentang Program)*: Watermark skematik sirkuit mikroprosesor (*Cyber Circuit Schematic*) dengan jalur bus data dan node terminal.
+    * *Chapter 02 (Dokumentasi Projek)*: Watermark retikel radar telemetri & osiloskop frekuensi (*Oscilloscope Reticle*).
+    * *Chapter 03 (Katalog Lomba)*: Watermark konstelasi kartu remi geometris (*Spades, Hearts, Clubs, Diamonds Wireframe*) di belakang panggung dek 3D.
+    * *Chapter 04 (Minat & Bakat)*: Watermark matriks heksagonal jaringan saraf (*Hexagonal Neural Matrix*).
+  * **Pendaran Aurora Ambient (*Soft Mesh Glow Orbs*)**: Menginjeksikan pencahayaan ambient radial difus (`blur-[128px]` s.d. `blur-[140px]`) di latar belakang setiap bab, menghidupkan kanvas hitam menjadi atmosfer bercahaya organik.
+  * **Braket Sudut HUD Siber (*Cyber Corner Brackets*) & Garis Shimmer**: Penambahan aksen sudut tech siku-siku pada kartu pilar dan kartu QR serta garis sinar pendar horizontal (`shimmer-divider`) yang bergerak menyapu batas horizon antar bab.
+
+---
+
 ### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
 * **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
   * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).

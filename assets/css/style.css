@@ -643,3 +643,53 @@ html {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+.cyber-watermark {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.045;
+  z-index: 0;
+  transition: opacity 0.5s ease;
+}
+.cyber-corner-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid rgba(44, 255, 5, 0.4);
+  border-right: 2px solid rgba(44, 255, 5, 0.4);
+  pointer-events: none;
+}
+.cyber-corner-bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid rgba(44, 255, 5, 0.4);
+  border-left: 2px solid rgba(44, 255, 5, 0.4);
+  pointer-events: none;
+}
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 0.045; transform: scale(1); }
+  50% { opacity: 0.08; transform: scale(1.02); }
+}
+.animate-pulse-subtle {
+  animation: pulseSubtle 8s ease-in-out infinite;
+}
+@keyframes shimmerLine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+.shimmer-divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(44, 255, 5, 0.6), transparent);
+  animation: shimmerLine 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}

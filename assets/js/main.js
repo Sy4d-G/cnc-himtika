@@ -123,6 +123,40 @@ tailwind.config = {
       const crownGroup = new THREE.Group();
       scene.add(crownGroup);
 
+      const pCount = 120;
+      const pGeo = new THREE.BufferGeometry();
+      const pPos = new Float32Array(pCount * 3);
+      const pColors = new Float32Array(pCount * 3);
+      const colGreen = new THREE.Color(0x2CFF05);
+      const colGold = new THREE.Color(0xEFBF04);
+      const colEmerald = new THREE.Color(0x00674F);
+
+      for (let p = 0; p < pCount; p++) {
+        const p3 = p * 3;
+        const rad = 2.2 + Math.random() * 4.2;
+        const th = Math.random() * Math.PI * 2;
+        const ph = (Math.random() - 0.5) * Math.PI * 0.9;
+        pPos[p3] = rad * Math.cos(ph) * Math.cos(th);
+        pPos[p3 + 1] = rad * Math.sin(ph) + (Math.random() - 0.5) * 1.8;
+        pPos[p3 + 2] = rad * Math.cos(ph) * Math.sin(th);
+
+        const selCol = Math.random() > 0.65 ? colGold : (Math.random() > 0.35 ? colGreen : colEmerald);
+        pColors[p3] = selCol.r;
+        pColors[p3 + 1] = selCol.g;
+        pColors[p3 + 2] = selCol.b;
+      }
+      pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+      pGeo.setAttribute('color', new THREE.BufferAttribute(pColors, 3));
+      const pMat = new THREE.PointsMaterial({
+        size: 0.048,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.85,
+        blending: THREE.AdditiveBlending
+      });
+      const cyberDust = new THREE.Points(pGeo, pMat);
+      scene.add(cyberDust);
+
       
       const titaniumMat = new THREE.MeshPhysicalMaterial({
         color: 0x181c1a,
@@ -394,6 +428,11 @@ tailwind.config = {
         
         haloRing.rotation.z += 0.012;
         tickRing.rotation.z -= 0.008;
+
+        if (cyberDust) {
+          cyberDust.rotation.y = elapsed * 0.04;
+          cyberDust.rotation.x = Math.sin(elapsed * 0.02) * 0.05;
+        }
 
         
         const leftHandEl = document.getElementById('adam-hand-img');
