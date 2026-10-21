@@ -73,7 +73,7 @@ Halaman web terbagi atas 5 section utama berurutan yang dapat diakses langsung m
 
 ### D. `#lomba` (Katalog 40 Kompetisi Terkurasi)
 * **Bilah Filter Kategori (`#category-tabs-track`)**: Menggunakan layout responsif multi-row wrapped di ponsel sehingga ke-5 kategori (`Semua`, `UI/UX`, `Web & Mobile`, `AI & Data`, `Cyber & IoT`) tampil utuh tanpa terpotong.
-* **Stage Kartu Poker (`#comp-slider-stage`)**: Carousel slider kartu remi kasino 3D yang membagi 40 kartu menjadi 4 tampilan slide (masing-masing 10 kartu dalam formasi 5 kolom x 2 baris).
+* **Stage Kartu Poker (`#comp-slider-stage`)**: Carousel slider kartu remi kasino 3D yang membagi 40 kartu menjadi 8 tampilan slide deck (masing-masing 5 kartu dalam formasi 1 baris simetris).
 * **Bilah Paginasi Bawah**: Tombol dock pemilih deck instan (`Deck 01`, `Deck 02`, `Deck 03`, `Deck 04`) dengan tombol detail yang dikunci di garis dasar (*mt-auto baseline*).
 
 ### E. `#minat-bakat` (Portal Pendataan Delegasi)
@@ -143,7 +143,7 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 * Secara otomatis dinonaktifkan pada perangkat layar sentuh (`(hover: none)`).
 
 ### E. Mesin Slider Katalog Kompetisi (`initCompetitionsSlider`)
-* Mengelompokkan kartu yang aktif menjadi slide-slide berisi maksimal 10 kartu (`setupCompetitionSlides`).
+* Mengelompokkan kartu yang aktif menjadi slide-slide berisi maksimal 5 kartu (`setupCompetitionSlides`).
 * Mendukung navigasi tombol dock deck (`Deck 01`, `Deck 02`, `Deck 03`, `Deck 04`) serta tombol panah atas/samping.
 * Mendukung deep-link URL hash `#deck1`, `#deck2`, `#deck3`, `#deck4`.
 

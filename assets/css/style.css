@@ -325,3 +325,17 @@ html {
     text-align: center;
   }
 }
+
+@media (max-width: 767px) {
+  .poker-card {
+    touch-action: pan-y !important;
+    transform: none !important;
+    box-shadow: 0 4px 14px -3px rgba(0, 0, 0, 0.75) !important;
+  }
+  .poker-glare {
+    display: none !important;
+  }
+  #competitions-slider-track {
+    touch-action: pan-y !important;
+  }
+}

@@ -1405,9 +1405,10 @@ tailwind.config = {
 
       
       let initialSlide = 0;
-      if (window.location.hash === '#deck2') initialSlide = 1;
-      else if (window.location.hash === '#deck3') initialSlide = 2;
-      else if (window.location.hash === '#deck4') initialSlide = 3;
+      const hashMatch = window.location.hash.match(/#deck(\d+)/i);
+      if (hashMatch) {
+        initialSlide = Math.max(0, parseInt(hashMatch[1], 10) - 1);
+      }
 
       
       setupCompetitionSlides('all', initialSlide);
@@ -1416,16 +1417,21 @@ tailwind.config = {
       const stage = document.getElementById('poker-stage');
       if (stage) {
         let touchStartX = 0;
+        let touchStartY = 0;
         let touchEndX = 0;
+        let touchEndY = 0;
         stage.addEventListener('touchstart', (e) => {
-          touchStartX = e.changedTouches[0].screenX;
+          touchStartX = e.changedTouches[0].clientX;
+          touchStartY = e.changedTouches[0].clientY;
         }, { passive: true });
         stage.addEventListener('touchend', (e) => {
-          touchEndX = e.changedTouches[0].screenX;
-          const diff = touchStartX - touchEndX;
-          if (Math.abs(diff) > 45) {
-            if (diff > 0) slideCompetitions(1);  
-            else slideCompetitions(-1);         
+          touchEndX = e.changedTouches[0].clientX;
+          touchEndY = e.changedTouches[0].clientY;
+          const diffX = touchStartX - touchEndX;
+          const diffY = touchStartY - touchEndY;
+          if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
+            if (diffX > 0) slideCompetitions(1);
+            else slideCompetitions(-1);
           }
         }, { passive: true });
       }
@@ -1459,10 +1465,9 @@ tailwind.config = {
       });
 
       totalFilteredCards = filtered.length;
-      currentSlideCount = Math.max(1, Math.ceil(totalFilteredCards / 10));
+      currentSlideCount = Math.max(1, Math.ceil(totalFilteredCards / 5));
       currentCompSlide = Math.min(Math.max(0, targetSlide), currentSlideCount - 1);
 
-      
       track.innerHTML = '';
 
       for (let s = 0; s < currentSlideCount; s++) {
@@ -1470,7 +1475,7 @@ tailwind.config = {
         slideDiv.className = 'comp-slide w-full flex-shrink-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 min-[1400px]:grid-cols-5 gap-4 sm:gap-5 items-stretch';
         slideDiv.setAttribute('data-slide-index', s);
 
-        const batch = filtered.slice(s * 10, (s + 1) * 10);
+        const batch = filtered.slice(s * 5, (s + 1) * 5);
         batch.forEach(card => {
           card.style.display = 'block';
           slideDiv.appendChild(card);
@@ -1511,8 +1516,8 @@ tailwind.config = {
       }
 
       
-      const startNum = totalFilteredCards === 0 ? 0 : currentCompSlide * 10 + 1;
-      const endNum = Math.min((currentCompSlide + 1) * 10, totalFilteredCards);
+      const startNum = totalFilteredCards === 0 ? 0 : currentCompSlide * 5 + 1;
+      const endNum = Math.min((currentCompSlide + 1) * 5, totalFilteredCards);
 
       const sumEl = document.getElementById('comp-slide-summary');
       if (sumEl) {
@@ -1547,8 +1552,8 @@ tailwind.config = {
       container.innerHTML = '';
       for (let s = 0; s < currentSlideCount; s++) {
         const sNum = s + 1;
-        const startCard = s * 10 + 1;
-        const endCard = Math.min((s + 1) * 10, totalFilteredCards);
+        const startCard = s * 5 + 1;
+        const endCard = Math.min((s + 1) * 5, totalFilteredCards);
         const isActive = s === currentCompSlide;
 
         const btn = document.createElement('button');
