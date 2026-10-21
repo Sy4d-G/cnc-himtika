@@ -186,6 +186,18 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Perombakan Spacing Global & Diferensiasi Bab (Chapter Differentiation)**:
+  * **Ruang Bernapas Vertikal Luas (Generous Spacing)**: Melipatgandakan padding section dari 48px-64px menjadi **80px s.d. 160px** (`py-20 sm:py-28 lg:py-32 xl:py-40`) untuk menghilangkan rasa sesak (*cramped visual fatigue*) dan memberikan jeda visual yang elegan antar segmen halaman ala standar Apple Keynote / Linear.
+  * **Lencana Kicker Bab Resmi (Chapter Badges)**: Menambahkan lencana penanda bab di setiap awal section untuk memandu alur mental pengguna:
+    * `CHAPTER 01 · TENTANG PROGRAM`
+    * `CHAPTER 02 · PAMERAN & REKAYASA`
+    * `CHAPTER 03 · DEK LOMBA TERKURASI`
+    * `CHAPTER 04 · REGISTRASI & DELEGASI`
+  * **Pemisah Garis Horizon Penuh (Full-Bleed Hairline Borders)**: Memperluas kontainer `<section>` menjadi `w-full` penuh dengan pembatas garis tipis horizontal (`border-b border-white/10` dan `border-[#2CFF05]/25`), memastikan setiap section memiliki batas visual yang tegas dari ujung ke ujung layar.
+  * **Pemberian Tonal Latar Bergradasi (Atmospheric Depth)**: Setiap section memiliki karakter pencahayaan latar bertingkat (dari obsidian pekat `#03110A`, ke gradasi hijau zamrud halus pada Katalog Lomba, hingga slate institusional pada registrasi).
+
+---
+
 ### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
 * **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
   * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).
