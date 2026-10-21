@@ -745,11 +745,13 @@ tailwind.config = {
         mobileMenu.classList.add('flex');
         hamburgerIcon.classList.add('hidden');
         closeIcon.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
       } else {
         mobileMenu.classList.add('hidden');
         mobileMenu.classList.remove('flex');
         hamburgerIcon.classList.remove('hidden');
         closeIcon.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
       }
     });
 
@@ -759,6 +761,7 @@ tailwind.config = {
         mobileMenu.classList.remove('flex');
         hamburgerIcon.classList.remove('hidden');
         closeIcon.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
       });
     });
 

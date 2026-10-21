@@ -79,18 +79,50 @@
       </button>
     </div>
 
-    <div id="mobile-menu" class="hidden absolute top-[75px] left-0 w-full bg-[#051810]/98 backdrop-blur-xl border-b border-[#636B2F]/40 px-6 py-6 flex-col gap-4 shadow-2xl lg:hidden">
-      <a href="#beranda" class="mobile-nav-link text-white text-base font-medium hover:text-[#2CFF05] py-2 border-b border-white/5">Beranda</a>
-      <a href="#tentang-cnc" class="mobile-nav-link text-white text-base font-medium hover:text-[#2CFF05] py-2 border-b border-white/5">Tentang CnC</a>
-      <a href="#dokumen" class="mobile-nav-link text-white text-base font-medium hover:text-[#2CFF05] py-2 border-b border-white/5">Dokumentasi Projek</a>
-      <a href="#lomba" class="mobile-nav-link text-white text-base font-medium hover:text-[#2CFF05] py-2 border-b border-white/5 flex items-center justify-between">
-        Info Lomba
-        <span class="text-[10px] bg-[#2CFF05]/15 text-[#2CFF05] border border-[#2CFF05]/30 px-2 py-0.5 rounded-full font-mono font-bold">40 TERKURASI</span>
-      </a>
-      <a href="#minat-bakat" class="mobile-nav-link text-white text-base font-medium hover:text-[#2CFF05] py-2 border-b border-white/5">Minat &amp; Bakat</a>
-      <a href="#minat-bakat" class="mobile-nav-link mt-2 text-center bg-[#2CFF05] text-[#03110A] text-sm font-bold uppercase py-3 rounded-xl shadow-neon-glow">
-        Daftar Minat Bakat
-      </a>
+    <div id="mobile-menu" class="hidden fixed top-[75px] left-0 w-full h-[calc(100vh-75px)] px-6 py-6 flex-col justify-between shadow-2xl lg:hidden overflow-y-auto z-50">
+      <div class="flex flex-col gap-2">
+        <a href="#beranda" class="mobile-nav-link text-white text-base font-semibold hover:text-[#2CFF05] py-3.5 px-4 rounded-xl hover:bg-white/5 border border-transparent hover:border-[#2CFF05]/30 transition-all flex items-center justify-between">
+          <span class="flex items-center gap-3">
+            <span class="text-[#2CFF05] font-mono text-xs font-bold">01</span>
+            <span>Beranda</span>
+          </span>
+          <span class="text-xs text-slate-500 font-mono">↗</span>
+        </a>
+        <a href="#tentang-cnc" class="mobile-nav-link text-white text-base font-semibold hover:text-[#2CFF05] py-3.5 px-4 rounded-xl hover:bg-white/5 border border-transparent hover:border-[#2CFF05]/30 transition-all flex items-center justify-between">
+          <span class="flex items-center gap-3">
+            <span class="text-[#2CFF05] font-mono text-xs font-bold">02</span>
+            <span>Tentang CnC</span>
+          </span>
+          <span class="text-xs text-slate-500 font-mono">↗</span>
+        </a>
+        <a href="#dokumen" class="mobile-nav-link text-white text-base font-semibold hover:text-[#2CFF05] py-3.5 px-4 rounded-xl hover:bg-white/5 border border-transparent hover:border-[#2CFF05]/30 transition-all flex items-center justify-between">
+          <span class="flex items-center gap-3">
+            <span class="text-[#2CFF05] font-mono text-xs font-bold">03</span>
+            <span>Dokumentasi Projek</span>
+          </span>
+          <span class="text-xs text-slate-500 font-mono">↗</span>
+        </a>
+        <a href="#lomba" class="mobile-nav-link text-white text-base font-semibold hover:text-[#2CFF05] py-3.5 px-4 rounded-xl hover:bg-white/5 border border-transparent hover:border-[#2CFF05]/30 transition-all flex items-center justify-between">
+          <span class="flex items-center gap-3">
+            <span class="text-[#2CFF05] font-mono text-xs font-bold">04</span>
+            <span>Info Lomba</span>
+          </span>
+          <span class="text-[10px] bg-[#2CFF05]/15 text-[#2CFF05] border border-[#2CFF05]/30 px-2.5 py-0.5 rounded-full font-mono font-bold">40 TERKURASI</span>
+        </a>
+        <a href="#minat-bakat" class="mobile-nav-link text-white text-base font-semibold hover:text-[#2CFF05] py-3.5 px-4 rounded-xl hover:bg-white/5 border border-transparent hover:border-[#2CFF05]/30 transition-all flex items-center justify-between">
+          <span class="flex items-center gap-3">
+            <span class="text-[#2CFF05] font-mono text-xs font-bold">05</span>
+            <span>Minat &amp; Bakat</span>
+          </span>
+          <span class="text-xs text-slate-500 font-mono">↗</span>
+        </a>
+      </div>
+      <div class="pt-6 border-t border-white/10 flex flex-col gap-3 pb-8">
+        <a href="#minat-bakat" class="mobile-nav-link w-full text-center bg-[#2CFF05] hover:bg-[#25dc04] active:scale-[0.98] text-[#03110A] text-sm font-bold uppercase tracking-wider py-3.5 rounded-xl shadow-neon-glow transition-all">
+          Daftar Minat Bakat
+        </a>
+        <p class="text-[11px] text-center text-slate-400 font-mono">Create and Compete · HIMTIKA UNSIKA</p>
+      </div>
     </div>
   </nav>
 
@@ -196,8 +228,8 @@
             <h3 class="text-xl sm:text-2xl font-bold text-white leading-snug">
               Inkubasi Ide &amp; Penyaluran Prestasi IT Mahasiswa Informatika
             </h3>
-            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
-              &ldquo;Create and Compete (CnC) adalah sebuah program yang berfungsi sebagai wadah pengembangan project mahasiswa sekaligus sebagai tempat pembinaan mahasiswa Informatika UNSIKA yang ingin mengikuti kompetisi-kompetisi di bidang IT. Nantinya project mahasiswa akan dipamerkan di acara-acara HIMTIKA dan dapat disalurkan ke kompetisi-kompetisi IT yang ada.&rdquo;
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+              Wadah resmi inkubasi prototipe teknologi inovatif dan pembinaan delegasi kompetisi IT mahasiswa Informatika UNSIKA menuju kejuaraan tingkat nasional.
             </p>
           </div>
           <div class="lg:col-span-4 grid grid-cols-2 gap-3 font-mono text-xs">
@@ -219,74 +251,82 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 
-        <div class="spotlight-card rounded-2xl p-6 sm:p-7 border border-[#2CFF05]/30 bg-[#071A11] flex flex-col justify-between">
+        <div class="spotlight-card rounded-2xl p-5 sm:p-6 border border-[#2CFF05]/30 bg-[#071A11] flex flex-col justify-between group hover:border-[#2CFF05]/60 transition-all">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="w-9 h-9 rounded-xl bg-[#00674F]/40 border border-[#2CFF05]/40 flex items-center justify-center text-[#2CFF05] font-mono font-bold text-sm">
-                01
-              </span>
-              <span class="text-[11px] font-mono text-[#2CFF05] bg-[#2CFF05]/10 px-2.5 py-1 rounded-full border border-[#2CFF05]/30">
-                KARYA &amp; REALISASI
-              </span>
+            <div class="relative w-full h-44 sm:h-52 rounded-xl overflow-hidden mb-4 border border-[#2CFF05]/30 bg-black/50">
+              <picture>
+                <source srcset="assets/images/projek-smart-waste/smart-waste-01.webp" type="image/webp">
+                <img src="assets/images/projek-smart-waste/smart-waste-01.jpg" alt="Mesin Pemilah Limbah Medis" width="600" height="400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async">
+              </picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#03110A] via-transparent to-transparent opacity-85"></div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#03110A]/85 backdrop-blur-md border border-[#2CFF05]/40 text-[#2CFF05] font-mono text-[10px] font-bold tracking-wider">
+                01 · REALISASI MESIN
+              </div>
+              <div class="absolute bottom-2.5 left-3 text-[11px] font-mono text-white/90 drop-shadow flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#2CFF05]"></span>
+                <span>Hardware, AI &amp; IoT Machine</span>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">
+
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#2CFF05] transition-colors">
               Program Pengembangan Projek
             </h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
-              Program yang bertujuan untuk merealisasikan ide-ide project mahasiswa dari gagasan awal hingga berwujud prototipe fungsional siap pameran.
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 line-clamp-2">
+              Realisasi ide teknologi mahasiswa dari konsep awal menjadi prototipe mesin fisik fungsional siap pameran kampus dan industri.
             </p>
-            <div class="space-y-2.5 border-t border-[#636B2F]/20 pt-4">
-              <div class="flex items-start gap-2.5 text-xs text-slate-300">
-                <span><strong>Pembuatan Proposal:</strong> Merumuskan latar belakang, solusi inovasi, arsitektur sistem, dan target luaran.</span>
-              </div>
-              <div class="flex items-start gap-2.5 text-xs text-slate-300">
-                <span><strong>Pengerjaan Project:</strong> Didampingi tim pengawas panitia pelaksana CnC untuk controlling dan progres berkala.</span>
-              </div>
-              <div class="flex items-start gap-2.5 text-xs text-slate-300">
-                <span><strong>Pameran Project:</strong> Karya dipamerkan pada event resmi HIMTIKA seperti Pekan IT, Dies Natalis, dan pameran kampus.</span>
-              </div>
+
+            <div class="flex flex-wrap gap-1.5 mb-2">
+              <span class="text-[11px] font-mono bg-[#00674F]/30 text-[#2CFF05] border border-[#2CFF05]/20 px-2.5 py-1 rounded-lg">📋 Proposal</span>
+              <span class="text-[11px] font-mono bg-[#00674F]/30 text-[#2CFF05] border border-[#2CFF05]/20 px-2.5 py-1 rounded-lg">⚙️ Fabrikasi</span>
+              <span class="text-[11px] font-mono bg-[#00674F]/30 text-[#2CFF05] border border-[#2CFF05]/20 px-2.5 py-1 rounded-lg">🏆 Pameran</span>
             </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+
+          <div class="mt-4 pt-3.5 border-t border-white/10 flex items-center justify-between">
             <span class="text-[11px] font-mono text-slate-400">Tim: 2-3 Anggota</span>
-            <a href="https://bit.ly/PendaftaranPorjectCnC" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[#2CFF05] hover:underline flex items-center gap-1">
+            <a href="https://bit.ly/PendaftaranPorjectCnC" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#2CFF05]/15 text-[#2CFF05] border border-[#2CFF05]/30 hover:bg-[#2CFF05] hover:text-[#03110A] text-xs font-semibold transition-all shadow-sm">
               <span>Daftar Projek</span>
               <span>→</span>
             </a>
           </div>
         </div>
 
-        <div class="spotlight-card rounded-2xl p-6 sm:p-7 border border-[#EFBF04]/30 bg-[#071A11] flex flex-col justify-between">
+        <div class="spotlight-card rounded-2xl p-5 sm:p-6 border border-[#EFBF04]/30 bg-[#071A11] flex flex-col justify-between group hover:border-[#EFBF04]/60 transition-all">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="w-9 h-9 rounded-xl bg-[#00674F]/40 border border-[#EFBF04]/40 flex items-center justify-center text-[#EFBF04] font-mono font-bold text-sm">
-                02
-              </span>
-              <span class="text-[11px] font-mono text-[#EFBF04] bg-[#EFBF04]/10 px-2.5 py-1 rounded-full border border-[#EFBF04]/30">
-                DELEGASI &amp; KOMPETISI
-              </span>
+            <div class="relative w-full h-44 sm:h-52 rounded-xl overflow-hidden mb-4 border border-[#EFBF04]/30 bg-black/50">
+              <picture>
+                <source srcset="assets/images/projek-flood-alert/flood-alert-01.webp" type="image/webp">
+                <img src="assets/images/projek-flood-alert/flood-alert-01.jpg" alt="Sistem Deteksi Banjir IoT" width="600" height="400" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async">
+              </picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#03110A] via-transparent to-transparent opacity-85"></div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#03110A]/85 backdrop-blur-md border border-[#EFBF04]/40 text-[#EFBF04] font-mono text-[10px] font-bold tracking-wider">
+                02 · DELEGASI KOMPETISI
+              </div>
+              <div class="absolute bottom-2.5 left-3 text-[11px] font-mono text-white/90 drop-shadow flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#EFBF04]"></span>
+                <span>Inkubasi &amp; Pembinaan IT</span>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">
+
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#EFBF04] transition-colors">
               Program Penyaluran Lomba
             </h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
-              Mewadahi minat dan bakat mahasiswa sekaligus menginkubasi untuk persiapan mahasiswa mengikuti perlombaan-perlombaan di bidang IT.
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 line-clamp-2">
+              Wadah pemetaan talenta dan pembinaan intensif bersama dosen ahli untuk menembus kejuaraan kompetisi IT bergengsi nasional.
             </p>
-            <div class="space-y-2.5 border-t border-[#636B2F]/20 pt-4">
-              <div class="flex items-start gap-2.5 text-xs text-slate-300">
-                <span><strong>Form Minat Bakat:</strong> Mahasiswa mendata minat keahlian melalui Google Form atau scan QR di media sosial.</span>
-              </div>
-              <div class="flex items-start gap-2.5 text-xs text-slate-300">
-                <span><strong>Inkubasi Dosen:</strong> Dicarikan dosen pembimbing ahli sesuai bidang lomba (Software, UI/UX, Cyber, AI, IoT).</span>
-              </div>
-              <div class="flex items-start gap-2.5 text-xs text-slate-300">
-                <span><strong>Compete &amp; LPJ:</strong> Pendelegasian resmi, penyusunan proposal &amp; LPJ, serta pendataan prestasi pasca lomba.</span>
-              </div>
+
+            <div class="flex flex-wrap gap-1.5 mb-2">
+              <span class="text-[11px] font-mono bg-[#EFBF04]/10 text-[#EFBF04] border border-[#EFBF04]/20 px-2.5 py-1 rounded-lg">🎯 Minat Bakat</span>
+              <span class="text-[11px] font-mono bg-[#EFBF04]/10 text-[#EFBF04] border border-[#EFBF04]/20 px-2.5 py-1 rounded-lg">👨‍🏫 Bimbingan</span>
+              <span class="text-[11px] font-mono bg-[#EFBF04]/10 text-[#EFBF04] border border-[#EFBF04]/20 px-2.5 py-1 rounded-lg">🥇 Juara Lomba</span>
             </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+
+          <div class="mt-4 pt-3.5 border-t border-white/10 flex items-center justify-between">
             <span class="text-[11px] font-mono text-slate-400">Pencarian Mentor Dosen</span>
-            <a href="https://bit.ly/MinatBakatCnC" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[#EFBF04] hover:underline flex items-center gap-1">
+            <a href="https://bit.ly/MinatBakatCnC" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#EFBF04]/15 text-[#EFBF04] border border-[#EFBF04]/30 hover:bg-[#EFBF04] hover:text-[#03110A] text-xs font-semibold transition-all shadow-sm">
               <span>Isi Form Lomba</span>
               <span>→</span>
             </a>
@@ -364,36 +404,61 @@
       </div>
 
       <div class="mb-8">
-        <h3 class="text-lg sm:text-xl font-bold text-white mb-4 text-left">Benefits Mengikuti Program CnC</h3>
+        <h3 class="text-lg sm:text-xl font-bold text-white mb-4 text-left flex items-center gap-2">
+          <span class="text-[#2CFF05]">✦</span>
+          <span>Benefits Mengikuti Program CnC</span>
+        </h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="p-5 rounded-2xl bg-[#071A11] border border-[#636B2F]/30 text-left hover:border-[#2CFF05]/40 transition-colors">
-            <h4 class="text-sm font-bold text-white mb-1.5">01 · Portofolio Nyata</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">Memiliki karya proyek teknologi riil yang teruji untuk portofolio karier profesional.</p>
+          <div class="p-5 rounded-2xl bg-[#071A11] border border-[#636B2F]/30 text-left hover:border-[#2CFF05]/50 transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-[#00674F]/40 border border-[#2CFF05]/30 flex items-center justify-center text-[#2CFF05] mb-3 text-lg group-hover:scale-110 transition-transform">
+              💼
+            </div>
+            <h4 class="text-sm font-bold text-white mb-1.5 group-hover:text-[#2CFF05] transition-colors">01 · Portofolio Nyata</h4>
+            <p class="text-xs text-slate-400 leading-relaxed line-clamp-2">Karya teknologi riil yang teruji untuk portofolio karier profesional dan industri.</p>
           </div>
-          <div class="p-5 rounded-2xl bg-[#071A11] border border-[#636B2F]/30 text-left hover:border-[#2CFF05]/40 transition-colors">
-            <h4 class="text-sm font-bold text-white mb-1.5">02 · Project Terealisasi</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">Ide kreatif bertransformasi dari sekadar konsep menjadi prototipe yang berfungsi nyata.</p>
+          <div class="p-5 rounded-2xl bg-[#071A11] border border-[#636B2F]/30 text-left hover:border-[#2CFF05]/50 transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-[#00674F]/40 border border-[#2CFF05]/30 flex items-center justify-center text-[#2CFF05] mb-3 text-lg group-hover:scale-110 transition-transform">
+              🚀
+            </div>
+            <h4 class="text-sm font-bold text-white mb-1.5 group-hover:text-[#2CFF05] transition-colors">02 · Prototipe Riil</h4>
+            <p class="text-xs text-slate-400 leading-relaxed line-clamp-2">Ide inovatif bertransformasi dari konsep menjadi prototipe mesin &amp; software fungsional.</p>
           </div>
-          <div class="p-5 rounded-2xl bg-[#071A11] border border-[#636B2F]/30 text-left hover:border-[#EFBF04]/40 transition-colors">
-            <h4 class="text-sm font-bold text-white mb-1.5">03 · Relasi &amp; Jaringan</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">Koneksi luas dengan sesama developer bertalenta, alumni, mentor, dan dosen pembimbing.</p>
+          <div class="p-5 rounded-2xl bg-[#071A11] border border-[#636B2F]/30 text-left hover:border-[#EFBF04]/50 transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-[#EFBF04]/10 border border-[#EFBF04]/30 flex items-center justify-center text-[#EFBF04] mb-3 text-lg group-hover:scale-110 transition-transform">
+              🌐
+            </div>
+            <h4 class="text-sm font-bold text-white mb-1.5 group-hover:text-[#EFBF04] transition-colors">03 · Relasi &amp; Mentor</h4>
+            <p class="text-xs text-slate-400 leading-relaxed line-clamp-2">Koneksi luas dengan dosen pembimbing ahli, alumni berprestasi, dan mentor kompetisi.</p>
           </div>
-          <div class="p-5 rounded-2xl bg-[#071A11] border border-[#636B2F]/30 text-left hover:border-[#EFBF04]/40 transition-colors">
-            <h4 class="text-sm font-bold text-white mb-1.5">04 · Sertifikat Penghargaan</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">Validasi rekognisi formal dari HIMTIKA UNSIKA serta poin penunjang kredit SKPI.</p>
+          <div class="p-5 rounded-2xl bg-[#071A11] border border-[#636B2F]/30 text-left hover:border-[#EFBF04]/50 transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-[#EFBF04]/10 border border-[#EFBF04]/30 flex items-center justify-center text-[#EFBF04] mb-3 text-lg group-hover:scale-110 transition-transform">
+              🎖️
+            </div>
+            <h4 class="text-sm font-bold text-white mb-1.5 group-hover:text-[#EFBF04] transition-colors">04 · Sertifikat &amp; SKPI</h4>
+            <p class="text-xs text-slate-400 leading-relaxed line-clamp-2">Validasi rekognisi formal dari HIMTIKA UNSIKA serta poin penunjang kredit SKPI.</p>
           </div>
         </div>
       </div>
 
-      <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-[#00674F]/30 to-[#071A11] border border-[#636B2F]/40 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-left">
-        <div class="space-y-1.5">
-          <span class="text-[11px] font-mono text-[#2CFF05] font-semibold uppercase tracking-wider">SENSUS PROJEK MAHASISWA</span>
-          <h4 class="text-lg sm:text-xl font-bold text-white">Sudah Punya Project Teknologi Mandiri?</h4>
-          <p class="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
-            HIMTIKA mendata mahasiswa yang memiliki project (baik sudah selesai maupun sedang tahap pengerjaan) untuk dipamerkan di panggung teknologi seperti Pekan IT, Dies Natalis, dan pameran kampus.
-          </p>
+      <div class="spotlight-card p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-[#071A11] via-[#03110A] to-[#00674F]/25 border border-[#2CFF05]/40 flex flex-col lg:flex-row items-center justify-between gap-6 relative overflow-hidden">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border border-[#2CFF05]/40 shrink-0 shadow-lg relative group bg-black/60">
+            <picture>
+              <source srcset="assets/images/projek-smart-waste/smart-waste-04.webp" type="image/webp">
+              <img src="assets/images/projek-smart-waste/smart-waste-04.jpg" alt="Hardware Projek Mahasiswa" width="200" height="200" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <span class="absolute bottom-1.5 left-1/2 -translate-x-1/2 text-[9px] font-mono font-bold text-[#2CFF05] bg-black/80 px-2 py-0.5 rounded-full border border-[#2CFF05]/30 whitespace-nowrap">SHOWCASE</span>
+          </div>
+          <div class="space-y-1.5">
+            <span class="text-[11px] font-mono text-[#2CFF05] font-semibold uppercase tracking-wider">SENSUS PROJEK MAHASISWA</span>
+            <h4 class="text-lg sm:text-xl font-bold text-white">Sudah Punya Project Teknologi Mandiri?</h4>
+            <p class="text-xs sm:text-sm text-slate-300 max-w-xl leading-relaxed">
+              Daftarkan ide atau prototipe karya tim Anda untuk dipamerkan di panggung teknologi Pekan IT, Dies Natalis, dan pameran kampus.
+            </p>
+          </div>
         </div>
-        <a href="https://tinyurl.com/PendataanProject" target="_blank" rel="noopener noreferrer" class="bg-[#2CFF05] hover:bg-[#25dc04] text-[#03110A] text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-xl transition-all shadow-neon-glow shrink-0 hover:scale-[1.02] active:scale-[0.98]">
+        <a href="https://tinyurl.com/PendataanProject" target="_blank" rel="noopener noreferrer" class="bg-[#2CFF05] hover:bg-[#25dc04] text-[#03110A] text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all shadow-neon-glow shrink-0 hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto text-center">
           Isi Pendataan Projek ↗
         </a>
       </div>
@@ -3118,54 +3183,54 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 w-full lg:w-auto text-left">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 w-full lg:w-auto text-center sm:text-left justify-items-center sm:justify-items-start max-w-lg lg:max-w-none mx-auto lg:mx-0">
 
-          <div>
+          <div class="flex flex-col items-center sm:items-start">
             <h4 class="text-sm font-bold text-[#2CFF05] uppercase tracking-wider mb-4 font-mono">Tentang Kami</h4>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li><a href="https://himtika.cs.unsika.ac.id/struktur-organisasi" target="_blank" class="hover:text-[#2CFF05] transition-colors">Struktur Organisasi</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/sejarah-himtika" target="_blank" class="hover:text-[#2CFF05] transition-colors">Sejarah</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/logo-himtika" target="_blank" class="hover:text-[#2CFF05] transition-colors">Logo</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/galeri-himtika" target="_blank" class="hover:text-[#2CFF05] transition-colors">Galeri</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/grand-design-himtika" target="_blank" class="hover:text-[#2CFF05] transition-colors">Grand Design</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/visi-misi" target="_blank" class="hover:text-[#2CFF05] transition-colors">Visi Misi</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/kontak-kami" target="_blank" class="hover:text-[#2CFF05] transition-colors">Kontak Kami</a></li>
+            <ul class="space-y-2.5 text-xs text-slate-300 flex flex-col items-center sm:items-start">
+              <li><a href="https://himtika.cs.unsika.ac.id/struktur-organisasi" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Struktur Organisasi</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/sejarah-himtika" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Sejarah</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/logo-himtika" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Logo</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/galeri-himtika" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Galeri</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/grand-design-himtika" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Grand Design</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/visi-misi" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Visi Misi</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/kontak-kami" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Kontak Kami</a></li>
             </ul>
           </div>
 
-          <div>
+          <div class="flex flex-col items-center sm:items-start">
             <h4 class="text-sm font-bold text-[#2CFF05] uppercase tracking-wider mb-4 font-mono">Media</h4>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li><a href="https://www.instagram.com/himtika_unsika/" target="_blank" rel="noopener noreferrer" class="hover:text-[#2CFF05] transition-colors">Berita</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/hikode/" target="_blank" rel="noopener noreferrer" class="hover:text-[#2CFF05] transition-colors">Artikel HIMTIKA</a></li>
-              <li><a href="https://www.instagram.com/cnc_himtika/" target="_blank" rel="noopener noreferrer" class="hover:text-[#2CFF05] transition-colors">Info Lomba</a></li>
+            <ul class="space-y-2.5 text-xs text-slate-300 flex flex-col items-center sm:items-start">
+              <li><a href="https://www.instagram.com/himtika_unsika/" target="_blank" rel="noopener noreferrer" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Berita</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/hikode/" target="_blank" rel="noopener noreferrer" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Artikel HIMTIKA</a></li>
+              <li><a href="https://www.instagram.com/cnc_himtika/" target="_blank" rel="noopener noreferrer" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Info Lomba</a></li>
             </ul>
           </div>
 
-          <div>
+          <div class="flex flex-col items-center sm:items-start">
             <h4 class="text-sm font-bold text-[#2CFF05] uppercase tracking-wider mb-4 font-mono">Event</h4>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li><a href="https://himtika.cs.unsika.ac.id/open-project/" target="_blank" rel="noopener noreferrer" class="text-[#2CFF05] font-semibold hover:underline">Create and Compete</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/himtika-exchange/" target="_blank" class="hover:text-[#2CFF05] transition-colors">Himtika Exchange</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/hgtc/" target="_blank" class="hover:text-[#2CFF05] transition-colors">HGTC</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/studyclub/" target="_blank" class="hover:text-[#2CFF05] transition-colors">Study Club</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/pekan-it/" target="_blank" class="hover:text-[#2CFF05] transition-colors">Pekan IT: NIC</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/pekan-it/detail-semantik/" target="_blank" class="hover:text-[#2CFF05] transition-colors">Pekan IT: Semantik IC</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/lkmmpd/" target="_blank" class="hover:text-[#2CFF05] transition-colors">LKMM-PD</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/diesnatalis/" target="_blank" class="hover:text-[#2CFF05] transition-colors">Diesnatalis</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/it-bootcamp/" target="_blank" class="hover:text-[#2CFF05] transition-colors">IT Bootcamp</a></li>
+            <ul class="space-y-2.5 text-xs text-slate-300 flex flex-col items-center sm:items-start">
+              <li><a href="https://himtika.cs.unsika.ac.id/open-project/" target="_blank" rel="noopener noreferrer" class="text-[#2CFF05] font-semibold hover:underline py-0.5 inline-block">Create and Compete</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/himtika-exchange/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Himtika Exchange</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/hgtc/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">HGTC</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/studyclub/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Study Club</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/pekan-it/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Pekan IT: NIC</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/pekan-it/detail-semantik/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Pekan IT: Semantik IC</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/lkmmpd/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">LKMM-PD</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/diesnatalis/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Diesnatalis</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/it-bootcamp/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">IT Bootcamp</a></li>
             </ul>
           </div>
 
-          <div>
+          <div class="flex flex-col items-center sm:items-start">
             <h4 class="text-sm font-bold text-[#2CFF05] uppercase tracking-wider mb-4 font-mono">Aplikasi Publik</h4>
-            <ul class="space-y-2 text-xs text-slate-300">
-              <li><a href="https://himtalks.vercel.app/himtalks" target="_blank" class="hover:text-[#2CFF05] transition-colors">Himtalks</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/himtika-awards/" target="_blank" class="hover:text-[#2CFF05] transition-colors">Himtika Award</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/media-partner/" target="_blank" class="hover:text-[#2CFF05] transition-colors">Media Partner</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/corporation/" target="_blank" class="hover:text-[#2CFF05] transition-colors">Corporation</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/kalender/" target="_blank" class="hover:text-[#2CFF05] transition-colors">Kalender</a></li>
-              <li><a href="https://himtika.cs.unsika.ac.id/dosen/" target="_blank" class="hover:text-[#2CFF05] transition-colors">Profil Tenaga Pendidik</a></li>
+            <ul class="space-y-2.5 text-xs text-slate-300 flex flex-col items-center sm:items-start">
+              <li><a href="https://himtalks.vercel.app/himtalks" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Himtalks</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/himtika-awards/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Himtika Award</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/media-partner/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Media Partner</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/corporation/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Corporation</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/kalender/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Kalender</a></li>
+              <li><a href="https://himtika.cs.unsika.ac.id/dosen/" target="_blank" class="hover:text-[#2CFF05] transition-colors py-0.5 inline-block">Profil Tenaga Pendidik</a></li>
             </ul>
           </div>
 

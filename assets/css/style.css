@@ -308,3 +308,20 @@ html {
       animation: arrivalPulse 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       border-radius: 28px;
     }
+
+#mobile-menu {
+  background-color: #04140d;
+  background-image: linear-gradient(180deg, #071a11 0%, #03110a 100%);
+  border-bottom: 1px solid rgba(44, 255, 5, 0.35);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.98), 0 0 30px rgba(0, 103, 79, 0.3);
+  z-index: 100;
+}
+
+@media (max-width: 639px) {
+  .footer-col-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

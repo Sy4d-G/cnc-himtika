@@ -163,6 +163,21 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
+* **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
+  * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).
+  * Mencegah total masalah tembus pandang atau tabrakan teks (*zero collision*) dengan elemen halaman di belakangnya.
+  * Dilengkapi pengunci gulir otomatis pada `body` saat menu dibuka (`overflow-hidden`).
+  * Setiap tautan navigasi dilengkapi nomor indeks monospace (`01` s.d. `05`) dan tombol aksi pendaftaran (*CTA*) terpisah di bagian bawah.
+* **Penyelarasan Footer Mobile Seimbang**:
+  * Mengatur susunan kolom sitemap pada layar smartphone menjadi tata letak simetris terpusat (`text-center sm:text-left` dan `justify-items-center sm:justify-items-start`) untuk mengeliminasi ketimpangan visual ke sisi kiri (*terlalu kiri*).
+* **Integrasi Visual & Reduksi Teks (*Anti Wall-of-Text*)**:
+  * Mengintegrasikan foto prototipe mesin fisik nyata (`smart-waste-01.webp`) pada kartu Program Pengembangan Projek dan sesi inkubasi hardware IoT (`flood-alert-01.webp`) pada kartu Program Penyaluran Lomba.
+  * Membatasi seluruh deskripsi fitur maksimal 2 baris (*line-clamp-2*) serta menggantikan teks paragraf panjang dengan chip tag visual ringkas.
+  * Menambahkan lencana ikon visual pada 4 kartu manfaat (*Benefits*) dan menyematkan foto showcase mesin (`smart-waste-04.webp`) pada spanduk sensus projek mahasiswa.
+
+---
+
 ## 6. Panduan Pengembang (Cara Menambah & Memodifikasi Konten)
 
 ### A. Cara Menambahkan Kompetisi Baru ke Katalog
