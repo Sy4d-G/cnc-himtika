@@ -88,7 +88,7 @@ Halaman web terbagi atas 5 section utama berurutan yang dapat diakses langsung m
 * **Tata Letak Ideal Mengacu IT Bootcamp HIMTIKA**:
   * Mengadopsi arsitektur hierarki resmi HIMTIKA (`site-footer`, `footer-main-row`, `footer-brand-col`, `footer-grid-col`, `footer-bottom`).
   * *Mobile*: Kolom identitas (emblem, alamat, dan 5 media sosial) terpusat, dengan grid 2-kolom sitemap terorganisir rapi di mana teks tautan rata kiri terhadap judul grupnya.
-  * *Desktop (>=1024px)*: Pembagian proporsional 32% kolom identitas rata kiri dan 65% grid 4-kolom sitemap terdistribusi simetris (`Tentang Kami` rata kiri, `Media` & `Event` terpusat, `Aplikasi Publik` rata kanan).
+  * *Desktop (>=1024px)*: Pembagian proporsional 32% kolom identitas (dengan penyesuaian posisi logo CnC digeser halus ke kanan/`margin-left: 28px` agar lebih seimbang dan terpusat di atas blok alamat) dan 65% grid 4-kolom sitemap terdistribusi simetris (`Tentang Kami` rata kiri, `Media` & `Event` terpusat, `Aplikasi Publik` rata kanan).
   * *Footer Bottom*: Baris atribusi resmi lisensi dan lencana `HIMTIKA 2026` dengan logo gear crest terpusat.
 
 ---

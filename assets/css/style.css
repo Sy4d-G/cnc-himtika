@@ -583,6 +583,9 @@ html {
     align-items: flex-start;
     text-align: left;
   }
+  .footer-logo-link {
+    margin-left: 28px;
+  }
   .footer-address {
     text-align: left;
   }
