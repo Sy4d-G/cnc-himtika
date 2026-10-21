@@ -210,6 +210,12 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Penyelarasan Teks Alur & Mentoring Dosen**:
+  * **Tahap 02 (Penjodohan Tim & Dosen)**: Memperbarui deskripsi alur pendaftaran menjadi *"Peserta dihubungkan ke rekan satu tim serta dicarikan dosen pembimbing ahli FASILKOM"* (menghilangkan batasan 'lintas semester' agar formasi tim lebih fleksibel).
+  * **Inkubasi & Mentoring**: Mengoreksi deskripsi pilar mentoring menjadi *"Pendampingan pembuatan proposal kompetisi bersama dosen ahli FASILKOM"* (memperjelas bahwa peran bimbingan dosen difokuskan pada pendampingan proposal karya tulis/solusi inovasi kompetisi).
+
+---
+
 ### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
 * **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
   * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).
