@@ -84,10 +84,12 @@ Halaman web terbagi atas 5 section utama berurutan yang dapat diakses langsung m
 * Wadah kartu QR Code statis beresolusi tinggi dengan tautan langsung `https://bit.ly/MinatBakatCnC`.
 * Panduan terpadu terintegrasi (6 Pilar Divisi dalam bentuk pill badges fleksibel, 3 Tahapan Delegasi dalam bentuk vertical timeline terhubung, dan baris narahubung resmi terpusat tanpa penumpukan kartu ganda).
 
-### F. `footer` (Identitas & Ekosistem Kampus)
-* **Emblem CnC Terpusat**: Logo vektor hijau bercahaya berukuran proporsional yang tegak lurus sejajar secara vertikal tepat di atas logo TikTok (ikon ke-3 di tengah).
-* Direktori tautan ekosistem HIMTIKA UNSIKA (Tentang Kami, Media, Event, dan Aplikasi Publik).
-* Baris lisensi dan hak cipta resmi mahasiswa Teknik Informatika UNSIKA.
+### F. `footer` (Identitas & Ekosistem Kampus — Standar IT Bootcamp HIMTIKA)
+* **Tata Letak Ideal Mengacu IT Bootcamp HIMTIKA**:
+  * Mengadopsi arsitektur hierarki resmi HIMTIKA (`site-footer`, `footer-main-row`, `footer-brand-col`, `footer-grid-col`, `footer-bottom`).
+  * *Mobile*: Kolom identitas (emblem, alamat, dan 5 media sosial) terpusat, dengan grid 2-kolom sitemap terorganisir rapi di mana teks tautan rata kiri terhadap judul grupnya.
+  * *Desktop (>=1024px)*: Pembagian proporsional 32% kolom identitas rata kiri dan 65% grid 4-kolom sitemap terdistribusi simetris (`Tentang Kami` rata kiri, `Media` & `Event` terpusat, `Aplikasi Publik` rata kanan).
+  * *Footer Bottom*: Baris atribusi resmi lisensi dan lencana `HIMTIKA 2026` dengan logo gear crest terpusat.
 
 ---
 
