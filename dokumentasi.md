@@ -229,6 +229,18 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Penyederhanaan Tipografi Kicker Bab & Lencana Tema (*Frameless Editorial Kickers*)**:
+  * **Penghilangan Kotak Penutup (*Border & Capsule Removal*)**: Menghilangkan seluruh kotak pembungkus (*pill capsule border & background*) pada penanda bab resmi:
+    * `• CHAPTER 01 · TENTANG PROGRAM`
+    * `★ TEMA RESMI TAHUN 2026`
+    * `• CHAPTER 02 · PAMERAN & REKAYASA`
+    * `• CHAPTER 03 · DEK LOMBA TERKURASI`
+    * `• CHAPTER 04 · REGISTRASI & DELEGASI`
+    * `• KODE QR RESMI INSTAGRAM @CNC_HIMTIKA`
+  * **Estetika Editorial Bersih**: Kicker kini tampil sebagai teks teknis murni (*clean monospaced kicker*) berwarna aksen hijau neon (`#2CFF05`) dan kuning emas (`#EFBF04`) dengan titik indikator pulsasi, menciptakan tata letak modern yang lapang dan terbebas dari kesan *badge overload*.
+
+---
+
 ### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
 * **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
   * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).
