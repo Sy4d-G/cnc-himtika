@@ -261,6 +261,24 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Penghilangan Titik Indikator / Bullets di Samping Teks (*Dot-Free Clean Typography*)**:
+  * **Status Bilah Atas Kartu Kompetisi (40 Lomba)**: Menghilangkan titik lingkaran berwarna (*status indicator dot*) di samping status pendaftaran (`CLOSED`, `BATCH 2 OPEN`, `SELESAI`, `OPEN REG`). Teks status kini tampil bersih: `{Rank} / {Status}` (misal `A♠ / CLOSED`, `K♦ / BATCH 2 OPEN`, `J♥ / SELESAI`).
+  * **Penanda Kicker Bab & Header Sub-Section**: Menghilangkan titik lingkaran pembuka (*leading bullets*) pada:
+    * `CHAPTER 01 · TENTANG PROGRAM`
+    * `3 PILAR UTAMA CNC`
+    * `CHAPTER 02 · PAMERAN & REKAYASA`
+    * `CHAPTER 03 · DEK LOMBA TERKURASI`
+    * `PILIH KATEGORI LOMBA (5)`
+    * `CHAPTER 04 · REGISTRASI & DELEGASI`
+    * `KODE QR RESMI INSTAGRAM @CNC_HIMTIKA`
+  * **Label Thumbnail Kartu Visi Program**: Menghilangkan titik lingkaran di samping judul thumbnail foto:
+    * `Hardware, IoT & Software`
+    * `Dosen FASILKOM UNSIKA`
+    * `Kompetisi & Poin SKPI`
+  * **Tampilan Minimalis Monospace**: Seluruh judul dan tag status kini berfokus pada tipografi monospace murni tanpa ornamen titik bulat.
+
+---
+
 ### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
 * **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
   * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).
