@@ -241,6 +241,16 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Penghilangan Kotak Penanda Dokumentasi & Nomor Projek (`#dokumen`)**:
+  * **Penyelarasan Desain Tanpa Bingkai (*Frameless Typography*)**: Menghilangkan kotak kapsul (*pill container*) pada penanda galeri foto dan nomor projek:
+    * `DOKUMENTASI · 5 FOTO` (Projek 01)
+    * `PROJEK 01 · Computer Vision & IoT`
+    * `DOKUMENTASI · 2 FOTO` (Projek 02)
+    * `PROJEK 02 · IoT & Disaster Early Warning`
+  * **Estetika Minimalis & Terpadu**: Elemen kini tampil sebagai teks monospace murni dengan bobot *font-bold* dan spasi aksara *tracking-wider* tanpa garis tepi maupun latar belakang kotak, konsisten dengan seluruh penanda bab pada halaman.
+
+---
+
 ### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
 * **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
   * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).
