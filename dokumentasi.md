@@ -216,6 +216,19 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Penukaran Foto Kartu Visi Sesuai Arahan RnD & Responsivitas Khusus Tablet / iPad (768px - 1024px)**:
+  * **Penukaran Foto Kartu Visi CnC (Card 02 & Card 03)**:
+    * *Kartu 02 (02 · MENTOR AHLI / Bimbingan Dosen & Kurasi)*: Menggunakan foto konsultasi/bimbingan tatap muka dosen pembimbing dengan mahasiswa di laboratorium (`flood-alert-01.webp` / `flood-alert-01.jpg`).
+    * *Kartu 03 (03 · PRESTASI LOMBA / Penyaluran Delegasi Nasional)*: Menggunakan foto tim delegasi mahasiswa berprestasi yang memegang prototipe/trofi perangkat keras (`smart-waste-04.webp` / `smart-waste-04.jpg`).
+    * *Harmonisasi Aksi Footer Kartu*: Menyeragamkan panah navigasi pada kartu 02 menjadi `Lihat Alur →` serta menyematkan `gap-2` dan `shrink-0` agar label kiri dan tautan kanan tidak bertabrakan pada kartu sempit.
+  * **Optimalisasi Responsif iPad & Tablet Portrait (768px - 834px)**:
+    * *Footer Navigasi 2x2 Simetris*: Mengubah `.footer-links-grid` pada breakpoint `640px` dan `768px` menjadi grid seimbang 2-kolom x 2-baris (`repeat(2, 1fr)` dengan `gap: 36px 52px`), mengeliminasi total anomali kolom tunggal menggantung (*orphaned column* pada Aplikasi Publik).
+    * *6 Pilar Divisi Peminatan*: Mengadopsi `grid-cols-2 md:grid-cols-3 lg:grid-cols-3` sehingga membentuk matriks simetris 3-kolom x 2-baris pada iPad/tablet portrait.
+    * *Alur Tahapan 5 Langkah*: Menyelaraskan kontainer tahapan menjadi `md:grid-cols-5` untuk menghadirkan garis waktu horizontal (*connected pipeline*) terpadu di layar tablet.
+    * *Kontainer Kartu Visi*: Menyesuaikan celah grid (`gap-4 sm:gap-4 lg:gap-6`) dan bantalan dalam (`p-4 sm:p-4.5 lg:p-5`) serta melonggarkan batas baris deskripsi (`line-clamp-3 sm:line-clamp-2 lg:line-clamp-3`) agar kalimat tersaji utuh tanpa terpotong di tengah kata.
+
+---
+
 ### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
 * **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
   * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).

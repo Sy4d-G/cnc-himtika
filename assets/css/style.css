@@ -520,16 +520,17 @@ html {
     height: 160px;
   }
   .footer-links-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 48px;
   }
+  .tentang-kami,
+  .media-hp-footer,
+  .align-center-lg,
+  .align-right-lg,
   .aplikasi-publik {
     display: flex;
     justify-content: flex-start;
     margin-left: 0;
-  }
-  .align-center-lg {
-    display: flex;
-    justify-content: flex-end;
   }
   .copyright-text {
     font-size: 14px;
@@ -541,13 +542,18 @@ html {
   .site-footer {
     padding: 56px 48px 36px;
   }
-  .align-center-lg {
-    display: flex;
-    justify-content: flex-end;
+  .footer-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 52px;
   }
-  .align-right-lg {
+  .tentang-kami,
+  .media-hp-footer,
+  .align-center-lg,
+  .align-right-lg,
+  .aplikasi-publik {
     display: flex;
     justify-content: flex-start;
+    margin-left: 0;
   }
   .group-title {
     font-size: 15px;
