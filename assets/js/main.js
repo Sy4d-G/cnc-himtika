@@ -1758,12 +1758,22 @@ tailwind.config = {
         const targetBtn = window.event.currentTarget;
         targetBtn.classList.remove('border-[#636B2F]/30', 'bg-[#071A11]', 'text-slate-300');
         targetBtn.classList.add('border-[#2CFF05]', 'bg-[#2CFF05]/15', 'text-[#2CFF05]');
-        if (targetBtn.scrollIntoView) {
-          targetBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        
+        const track = document.getElementById('category-tabs-track');
+        if (track && targetBtn) {
+          const trackRect = track.getBoundingClientRect();
+          const btnRect = targetBtn.getBoundingClientRect();
+          const targetScroll = track.scrollLeft + (btnRect.left - trackRect.left) - (track.clientWidth / 2) + (btnRect.width / 2);
+          track.scrollTo({ left: Math.max(0, targetScroll), behavior: 'smooth' });
         }
       }
 
       setupCompetitionSlides(category, 0);
+
+      const lombaSec = document.getElementById('lomba');
+      if (lombaSec && lombaSec.scrollLeft !== 0) lombaSec.scrollLeft = 0;
+      const mainEl = document.querySelector('main');
+      if (mainEl && mainEl.scrollLeft !== 0) mainEl.scrollLeft = 0;
     }
 
     function initPokerDealingObserver() {

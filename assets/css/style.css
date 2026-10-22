@@ -707,3 +707,7 @@ html {
   content-visibility: auto;
   contain-intrinsic-size: auto 650px;
 }
+
+#beranda, #tentang-cnc, #dokumen, #lomba, #minat-bakat {
+  overflow-x: clip;
+}

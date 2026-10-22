@@ -308,6 +308,24 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Resolusi Bug Pergeseran Konten Katalog pada Layar Menengah (*Category Tabs Viewport Leakage Fix*)**:
+  * **Penyebab Anomali**: Pada resolusi viewport tablet/layar menengah (~768px s.d. 820px seperti ukuran 773x648), pemanggilan fungsi native `targetBtn.scrollIntoView({ inline: 'center' })` saat mengklik tab kategori di sisi kanan (`Web & Mobile Dev`, `AI & Data Idea`, `Cyber Security & IoT`) merambat naik ke kontainer leluhur (*ancestor scroll containers*), secara tidak sengaja menggeser `scrollLeft` pada elemen `<section id="lomba">` dan `<main>` ke kanan hingga ~198px. Akibatnya, seluruh judul, paragraf, kartu lomba 3D, dan watermarks terdorong terpotong ke sisi kiri layar (*clipped to left*).
+  * **Solusi Presisi Berlingkup Track (*Track-Scoped ScrollTo*)**:
+    * Menggantikan `targetBtn.scrollIntoView` dengan kalkulasi internal murni berbasis `track.scrollTo`:
+      ```javascript
+      const track = document.getElementById('category-tabs-track');
+      if (track && targetBtn) {
+        const trackRect = track.getBoundingClientRect();
+        const btnRect = targetBtn.getBoundingClientRect();
+        const targetScroll = track.scrollLeft + (btnRect.left - trackRect.left) - (track.clientWidth / 2) + (btnRect.width / 2);
+        track.scrollTo({ left: Math.max(0, targetScroll), behavior: 'smooth' });
+      }
+      ```
+    * Menambahkan *guard resets* eksplisit (`lombaSec.scrollLeft = 0; mainEl.scrollLeft = 0;`).
+    * Menerapkan aturan CSS pertahanan `overflow-x: clip;` pada seluruh section utama (`#beranda, #tentang-cnc, #dokumen, #lomba, #minat-bakat`), mencegah total elemen tingkat section bertindak sebagai *scroll container* yang dapat digeser secara programatik.
+
+---
+
 ### H. Optimasi Performa Ekstrem & Efisiensi Memori (Advanced Lightweight Performance)
 
 Untuk memaksimalkan keringanan memori RAM, waktu muat (*First Contentful Paint*), dan efisiensi konsumsi baterai/GPU tanpa menurunkan kualitas visual atau memangkas fitur apa pun, diterapkan 5 lapisan optimasi tingkat lanjut:
