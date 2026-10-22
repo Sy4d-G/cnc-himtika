@@ -702,3 +702,8 @@ html {
   animation: shimmerLine 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   pointer-events: none;
 }
+
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 650px;
+}
