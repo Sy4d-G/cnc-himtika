@@ -279,6 +279,12 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Penghilangan Kotak Tombol pada Tautan Inline Instagram (`#lomba`)**:
+  * **Tautan `@cnc_himtika ↗` Tanpa Kotak**: Menghilangkan kotak tombol kapsul (`border border-[#2CFF05]/40 bg-[#00674F]/40 px-2.5 py-0.5 rounded-lg`) pada teks paragraf pengantar Chapter 03.
+  * **Tipografi Bersih Beraksen Neon**: Teks `@cnc_himtika ↗` kini tampil menyatu secara alami (*clean inline hyperlink*) dengan warna hijau neon (`#2CFF05`), font monospace tebal, dan efek garis bawah saat disorot (*hover:underline*), selaras dengan gaya editorial seluruh halaman.
+
+---
+
 ### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
 * **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
   * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).
