@@ -251,6 +251,16 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Penghilangan Kotak Status Kartu Lomba 3D & Tag Kata Kunci Visi (*Frameless Card Badges*)**:
+  * **Top Bar Kartu Kompetisi 3D (40 Lomba)**:
+    * Menghilangkan kotak persegi rank (`w-8 h-8 rounded-lg bg-[#00674F]/50 border`) dan kotak kapsul status pendaftaran (`px-2.5 py-1 rounded-full border`).
+    * Ditransformasikan menjadi tipografi monospaced presisi tinggi: `{Rank} / ● {Status}` (misal `A♠ / ● CLOSED`, `K♦ / ● BATCH 2 OPEN`, `J♥ / ● SELESAI`) dengan titik status bercahaya (*glowing status dot*) dan warna semantik sesuai bidang.
+  * **Tag Kata Kunci 3 Kartu Visi (`#tentang-cnc`)**:
+    * Menghilangkan kotak pembungkus border (`rounded-md border`) pada tag tahapan (`Proposal · Fabrikasi · Pameran`, `Dosen Ahli · Sharing Alumni · Validasi`, `40+ Lomba · Poin SKPI · Sertifikat`).
+    * Ditata sebagai deretan teks teknis bersih berpemisah titik tengah (`·`) yang anggun dan bebas dari kesan *badge fatigue*.
+
+---
+
 ### G. Responsivitas Khusus & Penyesuaian Antarmuka Mobile
 * **Mobile Hamburger Navigation Drawer (`#mobile-menu`)**:
   * Menggunakan tata letak tetap (`fixed top-[75px] left-0 w-full h-[calc(100vh-75px)]`) dengan latar belakang gradien obsidian pekat murni (`#04140d` ke `#03110a`, `z-index: 100`).
