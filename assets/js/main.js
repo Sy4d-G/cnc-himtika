@@ -1420,9 +1420,58 @@ tailwind.config = {
 
     function closeCompModal() {
       const modal = document.getElementById('comp-modal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
     }
+
+    function openPhotoModal(src, title, desc) {
+      const modal = document.getElementById('photo-modal');
+      const img = document.getElementById('photo-modal-img');
+      const titleEl = document.getElementById('photo-modal-title');
+      const descEl = document.getElementById('photo-modal-desc');
+      if (!modal || !img) return;
+      img.src = src;
+      if (titleEl) titleEl.innerText = title || 'Dokumentasi Projek CnC';
+      if (descEl) descEl.innerText = desc || 'Dokumentasi resmi prototipe rekayasa teknologi dan pembinaan delegasi kompetisi mahasiswa Informatika UNSIKA.';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePhotoModal(e) {
+      if (e && e.target && e.target.id !== 'photo-modal' && e.target.tagName !== 'BUTTON' && !e.target.closest('button')) {
+        return;
+      }
+      const modal = document.getElementById('photo-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function closeDocModal() {
+      const modal = document.getElementById('doc-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    window.openPhotoModal = openPhotoModal;
+    window.closePhotoModal = closePhotoModal;
+    window.closeDocModal = closeDocModal;
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCompModal();
+        closePhotoModal();
+        closeDocModal();
+        if (typeof closePassModal === 'function') closePassModal();
+      }
+    });
 
     
     

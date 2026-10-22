@@ -300,6 +300,14 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 
 ---
 
+* **Audit Fungsionalitas Interaktif & Resolusi Anomali Modal Galeri Foto**:
+  * **Penyediaan Fungsi Modal Foto Global (`openPhotoModal` & `closePhotoModal`)**: Mengimplementasikan fungsi pembuka dan penutup modal foto yang sebelumnya hilang pada `main.js`, sehingga 7 thumbnail dokumentasi projek dapat diklik untuk membuka pratinjau resolusi tinggi secara mulus.
+  * **Pencegahan Gulir Latar Belakang (*Body Scroll Lock*)**: Mengunci gulir halaman (`document.body.style.overflow = 'hidden'`) saat modal foto terbuka, dan memulihkannya saat ditutup.
+  * **Dukungan Aksesibilitas Tombol Escape**: Menambahkan *event listener* global tombol `Escape` untuk menutup modal aktif secara instan (`closeCompModal`, `closePhotoModal`, `closeDocModal`, `closePassModal`).
+  * **Proporsi Modal Bebas Scrollbar**: Menyetel tinggi gambar modal (`max-h-[50vh] sm:max-h-[54vh]`) dan pembungkus modal (`max-h-[90vh] flex flex-col justify-between`) agar seluruh elemen (kicker tag, judul, foto penuh, keterangan teks, dan tombol Tutup) tampil tuntas tanpa memicu bilah gulir vertikal internal yang mengganggu estetika.
+
+---
+
 ### H. Optimasi Performa Ekstrem & Efisiensi Memori (Advanced Lightweight Performance)
 
 Untuk memaksimalkan keringanan memori RAM, waktu muat (*First Contentful Paint*), dan efisiensi konsumsi baterai/GPU tanpa menurunkan kualitas visual atau memangkas fitur apa pun, diterapkan 5 lapisan optimasi tingkat lanjut:
