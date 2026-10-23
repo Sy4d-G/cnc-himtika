@@ -217,9 +217,12 @@ Berkas `assets/js/main.js` mengelola seluruh komputasi grafis dan interaktivitas
 ---
 
 * **Penukaran Foto Kartu Visi Sesuai Arahan RnD & Responsivitas Khusus Tablet / iPad (768px - 1024px)**:
+  * **Penghapusan Lencana Mengambang Foto Kartu Visi (`01 · INKUBASI RIIL`, `02 · MENTOR AHLI`, `03 · PRESTASI LOMBA`)**:
+    * Menghilangkan elemen pill badge floating di atas foto pada ketiga kartu visi Chapter 01 di `index.html` dan menyelaraskannya 1:1 pada kanvas desain Lunacy Desktop dan Mobile (`VC1_Tag`, `VC2_Tag`, `VC3_Tag`).
+    * Memberikan ruang pandang penuh pada visual dokumentasi karya, bimbingan laboratorium dosen, dan delegasi lomba tanpa interferensi teks penanda ganda.
   * **Penukaran Foto Kartu Visi CnC (Card 02 & Card 03)**:
-    * *Kartu 02 (02 · MENTOR AHLI / Bimbingan Dosen & Kurasi)*: Menggunakan foto konsultasi/bimbingan tatap muka dosen pembimbing dengan mahasiswa di laboratorium (`flood-alert-01.webp` / `flood-alert-01.jpg`).
-    * *Kartu 03 (03 · PRESTASI LOMBA / Penyaluran Delegasi Nasional)*: Menggunakan foto tim delegasi mahasiswa berprestasi yang memegang prototipe/trofi perangkat keras (`smart-waste-04.webp` / `smart-waste-04.jpg`).
+    * *Kartu 02 (Bimbingan Dosen & Kurasi)*: Menggunakan foto konsultasi/bimbingan tatap muka dosen pembimbing dengan mahasiswa di laboratorium (`flood-alert-01.webp` / `flood-alert-01.jpg`).
+    * *Kartu 03 (Penyaluran Delegasi Nasional)*: Menggunakan foto tim delegasi mahasiswa berprestasi yang memegang prototipe/trofi perangkat keras (`smart-waste-04.webp` / `smart-waste-04.jpg`).
     * *Harmonisasi Aksi Footer Kartu*: Menyeragamkan panah navigasi pada kartu 02 menjadi `Lihat Alur →` serta menyematkan `gap-2` dan `shrink-0` agar label kiri dan tautan kanan tidak bertabrakan pada kartu sempit.
   * **Optimalisasi Responsif iPad & Tablet Portrait (768px - 834px)**:
     * *Footer Navigasi 2x2 Simetris*: Mengubah `.footer-links-grid` pada breakpoint `640px` dan `768px` menjadi grid seimbang 2-kolom x 2-baris (`repeat(2, 1fr)` dengan `gap: 36px 52px`), mengeliminasi total anomali kolom tunggal menggantung (*orphaned column* pada Aplikasi Publik).
