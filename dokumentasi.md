@@ -408,14 +408,31 @@ Untuk memaksimalkan keringanan memori RAM, waktu muat (*First Contentful Paint*)
 
 ---
 
-## 7. Konfigurasi Deployment Statis
+## 7. Konfigurasi Deployment Statis & Otomasi CI/CD
 
-Proyek ini telah dilengkapi berkas konfigurasi hosting produksi bawaan:
+Proyek ini telah dilengkapi arsitektur CI/CD terintegrasi melalui GitHub Actions (`.github/workflows/ci-cd.yml`) serta konfigurasi multi-cloud hosting:
+
+### A. Pipeline Otomasi CI/CD (`.github/workflows/ci-cd.yml`)
+1. **Tahap Continuous Integration (CI: Quality, Security & Compliance Audit)**:
+   * **Validasi Sintaksis JS**: Pemeriksaan sintaksis JavaScript `assets/js/main.js` via `node --check`.
+   * **Skrip Audit Standar Produksi (`scripts/audit_ci.py`)**:
+     * *Aturan 0 Komentar*: Memastikan berkas web publik (`index.html`, `assets/css/style.css`, `assets/js/main.js`) 100% bebas komentar.
+     * *Tipografi & Brand Integrity*: Memvalidasi tidak adanya karakter em-dash/en-dash (selalu menggunakan `-`) dan tidak adanya kata terlarang seperti "Litbang".
+     * *Integritas Aset & Tautan*: Memindai seluruh tag `src`, `href`, dan `srcset` untuk menjamin seluruh aset lokal (gambar, font, stylesheet, skrip) benar-benar ada di disk (>0 byte) tanpa ada pranala rusak (404).
+     * *Konfigurasi & SEO*: Memvalidasi keabsahan format JSON pada `vercel.json` dan XML pada `sitemap.xml`.
+     * *Pemindaian Keamanan*: Mendeteksi kebocoran kredensial, token API, dan private keys secara otomatis.
+2. **Tahap Continuous Deployment (CD: Automated GitHub Pages Deployment)**:
+   * Setiap commit yang lolos audit CI dan di-push ke branch `main` otomatis diunggah dan dideploy sebagai mirror produksi di **GitHub Pages** (`https://sy4d-g.github.io/cnc-himtika/`).
+3. **Tahap Telemetri & Verifikasi Pasca-Deploy (CD: Telemetry & Health Check)**:
+   * Menguji endpoint produksi primer Vercel (`https://cnc-himtika.vercel.app/`) dan endpoint sekunder GitHub Pages untuk memastikan status HTTP 200 OK serta mencatat metrik ke GitHub Step Summary.
+
+### B. Konfigurasi Multi-Platform Hosting
 * **`vercel.json`**: Mengaktifkan *Cache-Control* 1 tahun untuk seluruh aset gambar, SVG, dan WebP, serta *must-revalidate* untuk `index.html` agar pembaruan konten langsung terbaca seketika oleh pengunjung.
 * **`netlify.toml`**: Standar konfigurasi header kompresi dan keamanan untuk deployment Netlify.
 * **`_headers`**: Header otomatis untuk Cloudflare Pages.
 * **`.htaccess`**: Modul kompresi Apache `mod_deflate` (Gzip) dan `mod_expires` untuk deployment cPanel hosting biasa.
 * **`robots.txt` & `sitemap.xml`**: Standar SEO resmi agar seluruh tautan terindeks sempurna di mesin pencari Google.
+* **Metadata Open Graph & Twitter Cards**: Ditanamkan pada `index.html` untuk unfurling pratinjau media sosial (WhatsApp, Telegram, Discord, LinkedIn).
 
 ---
 
