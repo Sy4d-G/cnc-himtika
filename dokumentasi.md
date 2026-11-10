@@ -52,6 +52,7 @@ Halaman web terbagi atas 5 section utama berurutan yang dapat diakses langsung m
 
 ### A. `#beranda` (Hero Stage 3D)
 * **Navbar (`#navbar`)**: Navigasi responsif *fixed* dengan efek kaca (*glassmorphism*), lencana status aktif, menu tautan, tombol aksi pendaftaran (*CTA*), dan tombol navigasi mobile (`#mobile-menu-btn`).
+* **Lencana Status Pintu Masuk (*Live Radar Kicker*)**: Menampilkan badge interaktif `CHAPTER 00 - PUSAT PRESTASI TEKNOLOGI 2026/2027` dengan indikator lampu radar hijau menyala (*beacon animation ping*) tepat di atas judul utama H1.
 * **Panggung Kreasi (`#creation-stage`)**: Wadah relatif dengan efek *glow* hijau. Memuat:
   * Pembungkus tangan kiri Adam (`#adam-hand-img`) dengan animasi melayang.
   * Pembungkus tangan kanan God (`#god-hand-img`) dengan animasi melayang.
@@ -59,6 +60,7 @@ Halaman web terbagi atas 5 section utama berurutan yang dapat diakses langsung m
   * Elemen cahaya latar belakang mahkota (`#crown-backlight-aura`).
   * Kanvas simulasi petir fraktal 2D (`#lightning-canvas`).
 * **Kluster Tombol Aksi Hero**: Tombol langsung menuju katalog lomba, formulir minat bakat, dan informasi program.
+* **Dek Kartu Metrik Siber (*Glassmorphic Cyber Metric Cards*)**: Mentransformasikan data metrik menjadi 3 kartu permukaan gelap bergradien (*multi-stop cyber depth*) dengan aksen sudut potong futuristik (`cyber-corner-tr`), pendaran neon hijau (`#2CFF05`), emas (`#EFBF04`), dan mint/putih berbingkai halus.
 
 ### B. `#tentang-cnc` (Mengenal Program CnC)
 * **Arsitektur Editorial Terbuka (Anti Card Fatigue)**: Menghilangkan kejenuhan komponen kartu berulang (*card overload*) dengan menerapkan variasi tata letak editorial:
